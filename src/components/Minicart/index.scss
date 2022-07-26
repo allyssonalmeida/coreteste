@@ -1,0 +1,24 @@
+.minicart{
+  display: flex;
+  
+  button{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14px;
+    padding: 0 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--light);
+    background: var(--red);
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,21 @@
+.shelf{
+  width: 100%;
+  padding: 20px 0;
+
+  &__title{
+    font-size: 1.25rem;
+    font-weight: 900;
+
+    &::after{
+      display: block;
+      content: '';
+      height: 4px;
+      width: 65px;
+      background: var(--light-gray);
+    }
+  }
+
+  &__items{
+    min-height: 450px;
+  }
+}
