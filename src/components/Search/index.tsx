@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from '../../ui/SearchIcon';
+import SearchIcon from '../../Icons/SearchIcon';
 
 import './index.scss';
 

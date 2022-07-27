@@ -13,7 +13,7 @@ const Banner: React.FC = () => {
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide>
           <img src={BannerImg} alt="banner" />
-          <div className="banner__content">
+          <div className="banner__content container">
             Olá, o que você está buscando?
             <strong>
               Criar ou migrar seu<br /> e-commerce?

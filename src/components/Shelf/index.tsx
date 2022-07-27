@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import ShelfItem from './components/ShelfItem';
 
 // Import Swiper styles
@@ -34,8 +34,6 @@ const Shelf: React.FC = () => {
       });
   }, [])
 
-
-
   return (
     <section className="shelf container">
       <h2 className="shelf__title">
@@ -43,11 +41,33 @@ const Shelf: React.FC = () => {
       </h2>
       <Swiper
         slidesPerView={4}
-        spaceBetween={30}
+        slidesPerGroup={1}
+        spaceBetween={99}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        navigation={true}
         pagination={{
-          clickable: true,
+          clickable: true
         }}
-        modules={[Pagination]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            navigation: false,
+            pagination: true
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            navigation: false,
+            pagination: true
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Navigation]}
         className="shelf__items"
       >
         {products?.map((item) => (

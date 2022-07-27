@@ -61,7 +61,7 @@
     background: var(--dark);
     padding: 8px 27px;
     border-radius: 6px;
-    color: #fff;
+    color: var(--light);
     margin-top: 8px;
     font-size: .75rem;
     text-transform: uppercase;
@@ -73,7 +73,7 @@
     height: 72px;
     width: 72px;
     background: var(--red);
-    color: #fff;
+    color: var(--light) ;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
     position: absolute;
     top: 0;
@@ -88,7 +88,7 @@
     }
   }
   
-  &__product--is-off{
+  &--is-off{
     .product__off{
       display: block;
     }

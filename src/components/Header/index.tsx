@@ -1,6 +1,6 @@
 import React from 'react';
 import Account from '../Account';
-import Logo from '../Logo';
+import Logo from '../../Icons/Logo';
 import MenuMobile from '../MenuMobile';
 import Minicart from '../Minicart';
 import Search from '../Search';

@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
-import { isPropertySignature } from 'typescript';
-import ProductInstallments from '../ProductInstallments';
+import React, { Fragment, useContext } from 'react';
+import { CartContext, CartContextType } from '../../../../context/CartContext';
 import ProductStars from '../ProductStars';
 
 import './index.scss';
@@ -21,9 +20,21 @@ interface ShelfItemProps{
 }
 
 const ShelfItem: React.FC<ShelfItemProps> = ({product}) => {
+  const { addToCart } = useContext(CartContext) as CartContextType
 
   const formatNumber = (value: number) =>{
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value/100)
+  }
+
+  function handleCart(){
+    addToCart({
+      id: product.productId,
+      name: product.productName,
+      img: product.imageUrl,
+      price: product.price,
+      listprice: product.listPrice,
+      quantity: 1,
+    })
   }
 
   return (
@@ -57,7 +68,7 @@ const ShelfItem: React.FC<ShelfItemProps> = ({product}) => {
             }
           </span>
         </a>
-        <button className="product__add-to-cart">
+        <button className="product__add-to-cart" onClick={handleCart}>
           Comprar
         </button>
       </div>
