@@ -1,5 +1,7 @@
 # Desafio Front End - Corebiz
 
+#### Veja o projeto ao vivo [aqui](https://coreteste.vercel.app/)
+
 ### Sobre
 O desafio consiste em replicar o layout disponível no [Figma](https://www.figma.com/file/awhTJyKgrjEOqPHUrrFBv0/Corebiz---Frontend-Challenge?node-id=0%3A1) e desenevolver as seguintes funcionalidades:
 
