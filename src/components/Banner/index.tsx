@@ -1,44 +1,53 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
 import BannerImg from '../../assets/images/banner.png';
 
 import "swiper/css";
 import "swiper/css/pagination";
 import './index.scss';
 
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 const Banner: React.FC = () => {
   return (
     <section className="banner">
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-        <SwiperSlide>
-          <img src={BannerImg} alt="banner" />
-          <div className="banner__content container">
-            Olá, o que você está buscando?
-            <strong>
-              Criar ou migrar seu<br /> e-commerce?
-            </strong>
+      <Splide options={{
+          arrows: false,
+        }}
+      >
+        <SplideSlide>
+          <div className="banner__item">
+            <img src={BannerImg} alt="banner" />
+            <div className="banner__content container">
+              Olá, o que você está buscando?
+              <strong>
+                Criar ou migrar seu<br /> e-commerce?
+              </strong>
+            </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={BannerImg} alt="banner" />
-          <div className="banner__content">
-            Olá, o que você está buscando?
-            <strong>
-              Criar ou migrar seu<br /> e-commerce?
-            </strong>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="banner__item">
+            <img src={BannerImg} alt="banner" />
+            <div className="banner__content">
+              Olá, o que você está buscando?
+              <strong>
+                Criar ou migrar seu<br /> e-commerce?
+              </strong>
+            </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={BannerImg} alt="banner" />
-          <div className="banner__content">
-            Olá, o que você está buscando?
-            <strong>
-              Criar ou migrar seu<br /> e-commerce?
-            </strong>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="banner__item">
+            <img src={BannerImg} alt="banner" />
+            <div className="banner__content">
+              Olá, o que você está buscando?
+              <strong>
+                Criar ou migrar seu<br /> e-commerce?
+              </strong>
+            </div>
           </div>
-        </SwiperSlide>
-      </Swiper>
+        </SplideSlide>
+      </Splide>
     </section>
   );
 }

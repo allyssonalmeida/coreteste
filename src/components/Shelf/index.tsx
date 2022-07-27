@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 import ShelfItem from './components/ShelfItem';
+import '@splidejs/react-splide/css';
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import './index.scss';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 interface ProductProps {
   productId: number
@@ -39,46 +39,33 @@ const Shelf: React.FC = () => {
       <h2 className="shelf__title">
         Mais Vendidos
       </h2>
-      <Swiper
-        slidesPerView={4}
-        slidesPerGroup={1}
-        spaceBetween={99}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        navigation={true}
-        pagination={{
-          clickable: true
+      <Splide
+        options={{
+          perPage: 4,
+          rewind: true,
+          breakpoints: {
+            1080:{
+              perPage: 3,
+              gap: '10px',
+            },
+            640: {
+              perPage: 2,
+              arrows: false,
+            },
+
+          }
         }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            navigation: false,
-            pagination: true
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-            navigation: false,
-            pagination: true
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[Navigation]}
         className="shelf__items"
       >
         {products?.map((item) => (
-          <SwiperSlide key={item.productId}>
+          <SplideSlide key={item.productId}>
             <ShelfItem
               key={item.productId}
               product={item}
             />
-          </SwiperSlide>
+          </SplideSlide>
         ))}
-      </Swiper>
+      </Splide>
     </section>
   );
 }

@@ -25,6 +25,25 @@
         height: 40px; 
       }
     }
+
+    @media only screen and (max-width: 520px){
+      display: grid;
+      align-content: center;
+      padding: 10px;
+      grid-template-columns: 50px 1fr 50px;
+      align-items: center;
+      justify-content: center;
+      row-gap: 0px;
+
+      .logo{
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        svg{
+          height: 25px; 
+        }
+      }
+    }
   }
 
   &__account{
@@ -33,5 +52,14 @@
     justify-content: flex-end;
     gap: 20px;
     min-width: 180px;
+
+    @media only screen and (max-width: 520px){
+      .account{
+        display: none;
+      }
+      .minicart{
+        width: 100%;
+      }
+    }
   }
 }

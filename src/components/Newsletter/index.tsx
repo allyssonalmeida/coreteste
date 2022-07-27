@@ -8,12 +8,14 @@ const Newsletter: React.FC = () => {
   const [errorEmail, setErrorEmail] = useState<boolean>(false)
   const [emailSent, setEmailSent] = useState<boolean>(false);
 
+  const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
   function handleSubmit(e:FormEvent){
     e.preventDefault();
     if(!name){
       setErrorName(true);
     }
-    if(!email){
+    if(!email || email.match(emailFormat)){
       setErrorEmail(true);
     }
 

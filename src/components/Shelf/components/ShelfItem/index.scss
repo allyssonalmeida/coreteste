@@ -1,8 +1,12 @@
 .product{
   background: transparent;
-  max-width: 220px!important;
-  min-height: 354px!important;
+  max-width: 220px;
+  // min-height: 354px;
   position: relative;
+
+  @media only screen and (max-width: 520px){
+
+  }
 
   &:hover{
     background: #E6E8EA;
@@ -35,6 +39,11 @@
     color: var(--gray);
     text-align: center;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 520px) {
+      font-size: .625rem;
+      min-height: 28px;
+    }
   }
   &__price{
     display: flex;
@@ -60,6 +69,7 @@
   &__add-to-cart{
     background: var(--dark);
     padding: 8px 27px;
+    border: none;
     border-radius: 6px;
     color: var(--light);
     margin-top: 8px;

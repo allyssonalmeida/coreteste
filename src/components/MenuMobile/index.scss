@@ -1,7 +1,21 @@
 .menu{
   display: none;
 
+  button{
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    span{
+      width: 22px;
+      height: 3px;
+      background: var(--dark);
+    }
+  }
   @media only screen and (max-width: 520px){
-    display: block;
+    display: flex;
+    align-items: center;
+
   }
 }
