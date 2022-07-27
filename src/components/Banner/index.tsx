@@ -1,8 +1,6 @@
 import React from 'react';
 import BannerImg from '../../assets/images/banner.png';
 
-import "swiper/css";
-import "swiper/css/pagination";
 import './index.scss';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';

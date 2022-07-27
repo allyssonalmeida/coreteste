@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import ShelfItem from './components/ShelfItem';
 import '@splidejs/react-splide/css';
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
 import './index.scss';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
